@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Oswald:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap");
+
+body{
+    border: 2px solid #000;
+    margin: 10px;
+}
+header img{
+    height: 100px;
+    width: 30%;
+}
+table{
+    margin: 10px;
+    width: -webkit-fill-available !important;
+}
+table tbody td{
+    font-weight: bold;
+}
+.table-bordered , .table-bordered td, .table-bordered th, .table thead th{
+    border:2px solid #000;
+}
+.req-2 h2{
+    font-weight: bold;
+    line-height: 1.5;
+    color: #212529;
+}
+.req-1 table{
+    margin: 40px 80px;
+}
+.req-2 {
+    padding: 0px 100px;
+}
+.req-2 table{
+    margin:10px 0px;
+}
+.req-2 table td{
+    width: 20%;
+    text-align: center;
+}
+.req-2 h4{
+    line-height: 50px;
+    font-size: 20px;
+    font-weight: 400;
+
+}
