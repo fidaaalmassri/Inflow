@@ -22,7 +22,8 @@
 
     background-color: white;
 
-                  }    
+                  } 
+                  .auth-main .auth_div{width:930px;z-index:999;display:flex;flex-wrap:wrap;justify-content:space-between;}   
     </style>
 </head>
 
@@ -53,7 +54,8 @@
 
 
 <div class="auth-main particles_js">
-    <div class="auth_div vivify popIn">
+    <div class="auth_div vivify popIn ">
+        
         <div class="auth_brand">
             <a class="navbar-brand" href="javascript:void(0);"><img src="{{asset('assets/images/icon.svg')}}" width="30" height="30" class="d-inline-block align-top mr-2" alt="">Oculux</a>
         </div>
@@ -72,29 +74,35 @@
 
                     <form method="POST" action="{{ route('register') }}" class="form-auth-small m-t-20">
                         @csrf
-                    <div class="form-group">
-                        <input id="name" placeholder="{{trans('lang.name')}}" type="text" class="form-control round @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
+                <div class="form-row">
+                    <div class="form-group col-md-2">                        
+                    </div>
+                    <div class="form-group col-md-4">                        
+                          <input id="name" placeholder="{{trans('lang.name')}}" type="text" class="form-control  round @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
                         @error('name')
                         <span class="invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>
                         </span>
                     @enderror
-
                     </div>
+                    <div class="form-group col-md-4">    
 
-                    <div class="form-group">
-                        <input id="email"  placeholder ="{{trans('lang.email')}}" type="email" class="form-control round @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
+                    <input id="email"  placeholder ="{{trans('lang.email')}}" type="email" class="form-control   round @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
 
-                                @error('email')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-
-                    </div>
-
-                    <div class="form-group">
-                        <input id="password"  placeholder = "{{trans('lang.password')}} " type="password" class="form-control round @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
+                    @error('email')
+                        <span class="invalid-feedback" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                    @enderror
+             </div>
+            
+        </div>
+                 
+        <div class="form-row">
+            <div class="form-group col-md-2">                        
+            </div>
+            <div class="form-group col-md-4"> 
+              <input id="password"  placeholder = "{{trans('lang.password')}} " type="password" class="form-control round @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
 
                         @error('password')
                             <span class="invalid-feedback" role="alert">
@@ -103,21 +111,42 @@
                         @enderror
 
                     </div>
-
-
-
-
-
-                    <div class="form-group">
-                        <input id="password-confirm" placeholder="{{trans('lang.Confirm-password')}}" type="password" class="form-control round" name="password_confirmation" required autocomplete="new-password">
-                    </div>
-                    <button type="submit" class="btn btn-primary btn-round btn-block">{{trans('lang.Register')}} </button>
-                    
-                    <div class="separator-linethrough"><span>OR</span></div>
+            <div class="form-group col-md-4"> 
+                <input id="password-confirm" placeholder="{{trans('lang.Confirm-password')}}" type="password" class="form-control round" name="password_confirmation" required autocomplete="new-password">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-4">                        
+            </div>
+            <div class="form-group col-md-4"> 
+          <button type="submit" class="btn btn-primary btn-round btn-block">{{trans('lang.Register')}} </button>
+        </div>
+        </div>
+   
+        <div class="separator-linethrough"><span>OR</span></div>
+         <div class="form-row">
+        <div class="form-group col-md-2">                        
+        </div>
+        <div class="form-group col-md-4">             
                 <button class="btn btn-round btn-signin-social"><i class="fa fa-facebook-official facebook-color"></i> {{trans('lang.sign_up_facebook')}}</button>
+            </div>
+            <div class="form-group col-md-4">             
+
                 <button class="btn btn-round btn-signin-social"><i class="fa fa-twitter twitter-color"></i> {{trans('lang.sign_up_twitter')}}</button>
+            </div>
+        </div>
+
+            <div class="form-row">
+                <div class="form-group col-md-2">                        
+                </div>
+                <div class="form-group col-md-4">   
                 <button class="btn btn-round btn-signin-social"><i class="fa  fa-instagram instagram-color"></i> {{trans('lang.sign_up_instagram')}}</button>
+            </div>
+            <div class="form-group col-md-4">   
+
                 <button class="btn btn-round btn-signin-social"><i class="fa  fa-youtube youtube-color"></i> {{trans('lang.sign_up_youtube')}}</button>
+            </div>
+        </div>
 
 
                       <div class="bottom">

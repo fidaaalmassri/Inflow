@@ -46,9 +46,9 @@
 </div>
 <div class="auth-main particles_js">
     <div class="auth_div vivify popIn">
-        <div class="auth_brand">
+        {{-- <div class="auth_brand">
         <a class="navbar-brand" href="javascript:void(0);"><img src="{{asset('assets/images/icon.svg')}}" width="30" height="30" class="d-inline-block align-top mr-2" alt="">Oculux</a>
-        </div>
+        </div> --}}
         <div class="card">
             <div class="body">
                 <p class="lead">{{trans('lang.company_sign_up')}}</p>
