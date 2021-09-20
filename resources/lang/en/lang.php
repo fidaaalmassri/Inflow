@@ -57,6 +57,7 @@ return [
      'Editing-Tshirt'=>'Editing Tshirt',
      'Designer'=>'Designer',
      'worker'=>'worker',
+     'name'=>'Name',
      'fname'=>'First name',
      'lname'=>'Last name',
      'phone'=>'phone',
@@ -66,7 +67,7 @@ return [
      'edit-password'=>'Editing your password',
      'Current-password'=>'Current password',
      'New-password'=>'New password',
-     'Confirm-password'=>'Confirm  new password',
+     'Confirm-password'=>'Confirm  password',
     'Change-password'=>'Change  password',
      'file-up'=>'File Up',
      'Add-design-file'=>'Add design file',
@@ -82,9 +83,21 @@ return [
       'basic-info'=>'Basic Information',
       'message-success-edit'=>'Edited successfully !',
      
-     'message-success-add'=>'Added successfully !'
-     
-   
+     'message-success-add'=>'Added successfully !',
+     'sign_up_influencer'=>'Sign up as  influencer',
+     'sign_up_company'=>'Sign up as  Company',
+     "sign_up_facebook"=>'Sign in with Facebook',
+     'sign_up_twitter'=>'Sign in with Twitter',
+     'sign_up_instagram'=>'Sign in with Instagram',
+     'sign_up_youtube'=>'Sign in with Youtube',
+     'ALREADY_USING'=>'Already Using Account ?',
+
+
+
+     'company_name'=>'Company Name',
+     'company_link'=>'Company Link',
+     'company_sign_up'=>'company Sign Up'
+
    
    
    

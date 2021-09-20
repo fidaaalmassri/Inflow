@@ -63,7 +63,7 @@
                          </a>   
                         </li>
                     <li>
-                        <a href="{{route('admin.logout')}}" class="icon-menu" title="{{trans('lang.Logout')}}">
+                        <a href="#" class="icon-menu" title="{{trans('lang.Logout')}}">
                            <span class="icon-power "></span>
                           {{trans('lang.Logout')}}
                         </a>

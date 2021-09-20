@@ -56,6 +56,7 @@ return [
      'Editing-Tshirt'=>'تعديل التيشيرت',
      'Designer'=>'المصمم',
      'worker'=>'العامل',
+     'name'=>'الاسم',
      'fname'=>'الاسم الأول',
      'lname'=>'الاسم الأخير',
      'phone'=>'رقم الهاتف',
@@ -65,7 +66,7 @@ return [
       'edit-password'=>'تعديل كلمة المرور',
       'Current-password'=>'كلمة السر الحالية',
       'New-password'=>'كلمة السر الجديدة',
-      'Confirm-password'=>'تأكيد كلمة السر الجديدة', 
+      'Confirm-password'=>'تأكيد كلمة المرور ', 
       'Change-password'=>'تغيير كلمة المرور',
       'file-up'=>'رفع الملفات',
       'Add-design-file'=>'إضافة ملف تصميم',
@@ -80,10 +81,20 @@ return [
      'edit-design-file'=>'تعديل ملف التصميم',
      'basic-info'=>'المعلومات الأساسية'  ,
      'message-success-edit'=>'تم التعديل بنجاح !'   ,
-     'message-success-add'=>' تمت الإضافة بنجاح !'
+     'message-success-add'=>' تمت الإضافة بنجاح !',
      
-     
-     
+     'sign_up_influencer'=>'إشترك كمؤثر',
+     'sign_up_company'=>'إشترك كعلامة تجارية / شركة',
+     'sign_up_facebook'=>'تسجيل الدخول عبر الفيسبوك',
+     'sign_up_twitter'=>'تسجيل الدخول عبر تويتر',
+     'sign_up_instagram'=>'تسجيل الدخول عبر إنستجرام',
+     'sign_up_youtube'=>'تسجيل الدخول عبر اليوتيوب',
+     'ALREADY_USING'=>'  لديك حساب بالفعل ',
+
+     'company_name'=>' اسم الشركة',
+     'company_link'=>' رابط الشركة',
+'company_sign_up'=>'تسجيل كشركة',
+
      
      
      

@@ -16,10 +16,21 @@
     <!-- MAIN CSS -->
     <link rel="stylesheet" href="{{asset('assets/css/site.min.css')}}">
     <link rel="stylesheet" href="{{asset('assets/css/custom.css')}}">
+<style>
 
+.separator-linethrough span {
+
+    background-color: white;
+
+                  }    
+    </style>
 </head>
 
+@if(App::getLocale() == 'ar')
 <body class="theme-cyan light_version rtl">
+@else
+<body class="theme-cyan light_version ltr">
+@endif
 
 <!-- Page Loader -->
 <div class="page-loader-wrapper">
@@ -39,19 +50,30 @@
     <span class="green"></span>
     <span class="orange"></span>
 </div>
+
+
 <div class="auth-main particles_js">
     <div class="auth_div vivify popIn">
         <div class="auth_brand">
             <a class="navbar-brand" href="javascript:void(0);"><img src="{{asset('assets/images/icon.svg')}}" width="30" height="30" class="d-inline-block align-top mr-2" alt="">Oculux</a>
         </div>
-        <div class="card">
+
+      
+
+
+
+
+
+
+
+        <div class="card mt-4">
             <div class="body">
-                <p class="lead">أنشاء حساب  </p>
+                <p class="lead">{{trans('lang.Register')}} </p>
 
                     <form method="POST" action="{{ route('register') }}" class="form-auth-small m-t-20">
                         @csrf
                     <div class="form-group">
-                        <input id="name" placeholder="الاسم" type="text" class="form-control round @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
+                        <input id="name" placeholder="{{trans('lang.name')}}" type="text" class="form-control round @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
                         @error('name')
                         <span class="invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>
@@ -61,7 +83,7 @@
                     </div>
 
                     <div class="form-group">
-                        <input id="email"  placeholder ="البريد الالكتروني" type="email" class="form-control round @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
+                        <input id="email"  placeholder ="{{trans('lang.email')}}" type="email" class="form-control round @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
 
                                 @error('email')
                                     <span class="invalid-feedback" role="alert">
@@ -72,7 +94,7 @@
                     </div>
 
                     <div class="form-group">
-                        <input id="password"  placeholder = "كلمة المرور" type="password" class="form-control round @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
+                        <input id="password"  placeholder = "{{trans('lang.password')}} " type="password" class="form-control round @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
 
                         @error('password')
                             <span class="invalid-feedback" role="alert">
@@ -87,12 +109,19 @@
 
 
                     <div class="form-group">
-                        <input id="password-confirm" placeholder="تأكيد كلمة المرور" type="password" class="form-control round" name="password_confirmation" required autocomplete="new-password">
+                        <input id="password-confirm" placeholder="{{trans('lang.Confirm-password')}}" type="password" class="form-control round" name="password_confirmation" required autocomplete="new-password">
                     </div>
-                    <button type="submit" class="btn btn-primary btn-round btn-block">تسجيل </button>
+                    <button type="submit" class="btn btn-primary btn-round btn-block">{{trans('lang.Register')}} </button>
                     
+                    <div class="separator-linethrough"><span>OR</span></div>
+                <button class="btn btn-round btn-signin-social"><i class="fa fa-facebook-official facebook-color"></i> {{trans('lang.sign_up_facebook')}}</button>
+                <button class="btn btn-round btn-signin-social"><i class="fa fa-twitter twitter-color"></i> {{trans('lang.sign_up_twitter')}}</button>
+                <button class="btn btn-round btn-signin-social"><i class="fa  fa-instagram instagram-color"></i> {{trans('lang.sign_up_instagram')}}</button>
+                <button class="btn btn-round btn-signin-social"><i class="fa  fa-youtube youtube-color"></i> {{trans('lang.sign_up_youtube')}}</button>
+
+
                       <div class="bottom">
-                        <span class="helper-text"> لديك حساب بالفعل ؟<a href="{{route('login')}}">تسجيل الدخول</a></span>
+                        <span class="helper-text"> {{trans('lang.ALREADY_USING')}}<a href="{{route('login')}}">{{trans('lang.Login')}}</a></span>
                     </div>
                 </form>
 

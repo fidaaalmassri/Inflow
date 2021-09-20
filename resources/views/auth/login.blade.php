@@ -26,6 +26,26 @@ $textdir = 'rtl';
     <link rel="stylesheet" href="{{asset('assets/css/site.min.css')}}">
     <link rel="stylesheet" href="{{asset('assets/css/custom.css')}}">
 
+<style>
+
+.img-fluid {
+    max-width: 100%;
+    height: 100%;
+}
+.btnn-round{
+    border-radius: 50px;
+padding-left: 12px;
+    padding-right: 12px
+}
+
+.btn-purple{
+    color: #fff;
+    background-color: rgb(151, 52, 144);
+    border-color:rgb(151, 52, 144);
+  }
+</style>
+
+
 </head>
 
 
@@ -110,13 +130,18 @@ $textdir = 'rtl';
                         @endif
 
 
-                        <span class="text-center helper-text" >{{trans("lang.Don't have an account?")}}  <a href="{{ route('register') }}"> {{trans('lang.Register')}} </a></span>
+                        <span class="text-center helper-text" >{{trans("lang.Don't have an account?")}}   {{trans('lang.Register')}} </span>
                         
-                        <div  class="text-center helper-text mt-2" >
+
+                        <div class="form-group clearfix text-center">
+                        <a href="{{ route('register') }}" class="btn btn-sm btn-purple btnn-round " title="">{{trans('lang.sign_up_influencer')}}</a>
+                        <a href="{{route('company-signup')}}" class="btn btn-sm  btn-info  btnn-round " title="Themeforest"> {{trans('lang.sign_up_company')}}</a>
+                    </div>
+                        <div  class="text-center helper-text mt-4" >
                             
                             
                             
-                            <div class="  dropdown show ">
+                            <div class="dropdown show">
                 <?php
                 $lang = '';
                 if(App::getLocale() == 'en'){
@@ -127,7 +152,7 @@ $textdir = 'rtl';
                                         @if(App::getLocale() == 'en')
 
                 <a class="icone_cuscolor dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                 <img class="img-responsive" src="{{asset('/public/assets/images/en.jpg')}}">&nbsp;  {{$lang}} 
+                                 <img class="img-responsive" src="{{asset('/assets/images/en.jpg')}}">&nbsp;  {{$lang}} 
                               
                          
                  </a>
@@ -135,7 +160,7 @@ $textdir = 'rtl';
                  @if(App::getLocale() == 'ar')
 
                     <a class="icone_cuscolor dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                 <img class="img-responsive" src="{{asset('/public/assets/images/ar.jpg')}}">&nbsp;  {{$lang}} 
+                 <img class="img-responsive" src="{{asset('/assets/images/ar.jpg')}}">&nbsp;  {{$lang}} 
                                   
                            
                     </a>
@@ -145,9 +170,9 @@ $textdir = 'rtl';
 
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
 
-                            <a class="dropdown-item" href="{{ url('change/en') }}"  >  <img class="img-responsive" src="{{asset('/public/assets/images/en.jpg')}}">&nbsp;&nbsp;{{trans('lang.english')}}
+                            <a class="dropdown-item" href="{{ url('change/en') }}"  >  <img class="img-responsive" src="{{asset('/assets/images/en.jpg')}}">&nbsp;&nbsp;{{trans('lang.english')}}
                             </a>
-                           <a class="dropdown-item" href="{{ url('change/ar') }}"  >  <img class="img-responsive" src="{{asset('/public/assets/images/ar.jpg')}}">&nbsp;&nbsp;{{trans('lang.arabic')}}
+                           <a class="dropdown-item" href="{{ url('change/ar') }}"  >  <img class="img-responsive" src="{{asset('/assets/images/ar.jpg')}}">&nbsp;&nbsp;{{trans('lang.arabic')}}
                            </a>
                 </div>
              </div>
