@@ -27,9 +27,11 @@ class CreateInfluencesTable extends Migration
             $table->string('location')->nullable();
             $table->text('description')->nullable();
             $table->date('birthday')->nullable();
-            $table->string('password')->nullable();
+            // $table->string('password')->nullable();
             $table->bigInteger('interest_id')->unsigned();
             $table->foreign('interest_id')->references('id')->on('interests')->onDelete('cascade');
+            $table->bigInteger('user_id')->unsigned();
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->softDeletes();
             $table->timestamps();
         });

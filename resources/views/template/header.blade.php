@@ -39,7 +39,7 @@
                  @if(App::getLocale() == 'ar')
 
                     <a class="icone_cuscolor dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                 <img class="img-responsive" src="{{asset('/public/assets/images/ar.jpg')}}">&nbsp;  {{$lang}} 
+                 <img class="img-responsive" src="{{asset('/assets/images/ar.jpg')}}">&nbsp;  {{$lang}} 
                                   
                            
                     </a>
@@ -49,9 +49,9 @@
 
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
 
-                            <a class="dropdown-item" href="{{ url('change/en') }}"  >  <img class="img-responsive" src="{{asset('/public/assets/images/en.jpg')}}">&nbsp;&nbsp;{{trans('lang.english')}}
+                            <a class="dropdown-item" href="{{ url('change/en') }}"  >  <img class="img-responsive" src="{{asset('/assets/images/en.jpg')}}">&nbsp;&nbsp;{{trans('lang.english')}}
                             </a>
-                           <a class="dropdown-item" href="{{ url('change/ar') }}"  >  <img class="img-responsive" src="{{asset('/public/assets/images/ar.jpg')}}">&nbsp;&nbsp;{{trans('lang.arabic')}}
+                           <a class="dropdown-item" href="{{ url('change/ar') }}"  >  <img class="img-responsive" src="{{asset('/assets/images/ar.jpg')}}">&nbsp;&nbsp;{{trans('lang.arabic')}}
                            </a>
                 </div>
              </div>
@@ -63,7 +63,7 @@
                          </a>   
                         </li>
                     <li>
-                        <a href="#" class="icon-menu" title="{{trans('lang.Logout')}}">
+                        <a href="{{route('logout')}}" class="icon-menu" title="{{trans('lang.Logout')}}">
                            <span class="icon-power "></span>
                           {{trans('lang.Logout')}}
                         </a>

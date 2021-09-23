@@ -22,6 +22,24 @@ Auth::routes();
 Route::get('/', function () {
     return redirect('/login');
 });
-Route::get('/company-signup', 'Company\CompanyController@index')->name('company-signup');
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::namespace('Company')->prefix('/company')->group(function (){
+    Route::get('/signup', 'CompanyController@index')->name('company-signup');
+
+    Route::post('/addCompany', 'CompanyController@store')->name('company.store');
+
+    Route::get('profile/{id}', 'CompanyController@show_profile')->name('profile');
+    Route::get('influencers', 'CompanyController@all_influencers')->name('all_influencers');
+
+    
+
+});
+
+Route::get('logout', function () {
+    Auth::logout();
+    return redirect('/login');
+})->name('logout');
+
+
 

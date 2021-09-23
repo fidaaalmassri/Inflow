@@ -52,39 +52,41 @@
         <div class="card">
             <div class="body">
                 <p class="lead">{{trans('lang.company_sign_up')}}</p>
-                <form class="form-auth-small m-t-20">
+           
+                    <form class="form-auth-small m-t-20" method="POST" action="{{route('company.store')}}" id="basic-form" novalidate>
+                        @csrf
 
 
                 <div class="form-group">
 
-                <input id="company_name" placeholder="{{trans('lang.company_name')}}" type="text" class="form-control round @error('company_name') is-invalid @enderror" name="name" value="{{ old('company_name') }}" required autocomplete="company_name" autofocus>
+                <input id="company_name" placeholder="{{trans('lang.company_name')}}" type="text" class="form-control round @error('company_name') is-invalid @enderror" name="company_name" value="{{ old('company_name') }}" required autocomplete="company_name" autofocus>
                 </div>
         <div class="form-group">
 
-            <input id="company_link" placeholder="{{trans('lang.company_link')}}" type="text" class="form-control round @error('company_link') is-invalid @enderror" name="name" value="{{ old('company_link') }}" required autocomplete="company_link" autofocus>
+            <input id="company_link" placeholder="{{trans('lang.company_link')}}" type="text" class="form-control round @error('company_link') is-invalid @enderror" name="company_link" value="{{ old('company_link') }}" required autocomplete="company_link" autofocus>
             </div>
 
 
 
             <div class="form-group">
 
-<input id="fname" placeholder="{{trans('lang.fname')}}" type="text" class="form-control round @error('fname') is-invalid @enderror" name="name" value="{{ old('fname') }}" required autocomplete="fname" autofocus>
+<input id="fname" placeholder="{{trans('lang.fname')}}" type="text" class="form-control round @error('fname') is-invalid @enderror" name="fname" value="{{ old('fname') }}" required autocomplete="fname" autofocus>
 </div>
 <div class="form-group">
 
-<input id="lname" placeholder="{{trans('lang.lname')}}" type="text" class="form-control round @error('lname') is-invalid @enderror" name="name" value="{{ old('lname') }}" required autocomplete="lname" autofocus>
+<input id="lname" placeholder="{{trans('lang.lname')}}" type="text" class="form-control round @error('lname') is-invalid @enderror" name="lname" value="{{ old('lname') }}" required autocomplete="lname" autofocus>
 </div>
 
 
                     <div class="form-group">
-                        <input type="email" class="form-control round" placeholder="{{trans('lang.email')}}">
+                        <input type="email" id="email" name="email" class="form-control round" placeholder="{{trans('lang.email')}}">
                     </div>
                     <div class="form-group">                            
-                        <input type="password" class="form-control round" placeholder="{{trans('lang.password')}}">
+                        <input type="password" id="password" name="password" class="form-control round" placeholder="{{trans('lang.password')}}">
                     </div>
 
                     <div class="form-group">                            
-                        <input type="confirm-password" class="form-control round" placeholder="{{trans('lang.Confirm-password')}}">
+                        <input type="password" id="Confirm_password" name="Confirm_password" class="form-control round" placeholder="{{trans('lang.Confirm-password')}}">
                     </div>
                     <button type="submit" class="btn btn-primary btn-round btn-block">{{trans('lang.Register')}}</button>                                
                 </form>

@@ -37,7 +37,12 @@ $textdir = 'rtl';
 
 <script src="{{ asset('js/dropzone.js') }}" type="text/javascript"></script>
 
+<style>
 
+.user-account .dropdown {
+    display: inline-block;
+    vertical-align: -9px;}
+</style>
 </head>
 
 @if(App::getLocale() == 'ar')

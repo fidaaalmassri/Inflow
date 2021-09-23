@@ -8,13 +8,12 @@
     <div class="sidebar-scroll">
         <div class="user-account">
             <div class="user_div">
-
-                <img src="{{ Auth::user()->avater?asset('storage/'. Auth::user()->avater):asset('assets/images/user-small.png') }}" class="user-photo" alt="صورة المستخدم">
+            <img src="{{asset('assets/images/user-small.png') }}" class="user-photo" alt="">
             </div>
             <div class="dropdown">
-                <span>{{trans('lang.welcome')}}،</span>
-                <a href="{{route('profile',['id'=>auth()->user()->id])}}" class="user-name">
-                    <strong>{{auth()->user()->name}}</strong>
+                <strong> {{trans('lang.welcome')}}،
+                <a href="" class="">
+                {{auth()->user()->name}}</strong>
                 </a>
             </div>
         </div>
@@ -22,18 +21,14 @@
             <ul id="main-menu" class="metismenu">
                 <li class="divider"></li>
                 <li class="@yield('profile')">
-                    <a href="{{route('profile',['id'=>auth()->user()->id])}}"><i class="icon-user"></i><span>{{trans('lang.profile')}} </span></a>
+                    <a href="{{route('profile',['id'=>auth()->user()->id])}}"><i class="icon-user"></i><span>  الملف الشحصي </span></a>
                 </li>
 
-                <li class="@yield('all_requests')">
-                    <a href="{{route('admin.requests')}}"><i class="icon-layers"></i><span> {{trans('lang.requests')}} </span></a>
-                </li>
-                <li class="@yield('file_upload')">
-                    <a href="{{route('admin.uploadfile')}}">
-                        <i class="icon-cloud-upload"></i><span>  {{trans('lang.uploadfile')}} </span></a>
+                <li class="@yield('influences')">
+                    <a href="{{route('all_influencers')}}"><i class="icon-users"></i><span>  المؤثرين </span></a>
                 </li>
 
-                <li><a href="{{route('admin.logout')}}"><i class="icon-power"></i>{{trans('lang.Logout')}}</a></li>
+                <li><a href="{{route('logout')}}"><i class="icon-power"></i>تسجيل الخروج</a></li>
             </ul>
         </nav>
     </div>

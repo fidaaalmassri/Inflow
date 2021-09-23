@@ -70,6 +70,13 @@ padding-left: 12px;
     </div>
 </div>
 
+@if (session('message'))
+<div class="alert alert-success">
+
+    {{session('message')}}
+</div>
+@endif
+
 <div class="auth-main2 particles_js">
     <div class="auth_div vivify fadeInTop">
         <div class="card">
