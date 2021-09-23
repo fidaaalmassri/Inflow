@@ -143,8 +143,17 @@
                 <button class="btn btn-round btn-signin-social"><i class="fa  fa-instagram instagram-color"></i> {{trans('lang.sign_up_instagram')}}</button>
             </div>
             <div class="form-group col-md-4">   
-
-                <button class="btn btn-round btn-signin-social"><i class="fa  fa-youtube youtube-color"></i> {{trans('lang.sign_up_youtube')}}</button>
+            
+                {{-- <a href="https://accounts.google.com/o/oauth2/auth?scope=https://www.googleapis.com/auth/youtube.readonly&
+                access_type=offline&
+                include_granted_scopes=true&
+                state=state_parameter_passthrough_value&
+                redirect_uri=http://127.0.0.1:8000/login/google/callback&
+                response_type=code&
+                client_id=client_id" target="_blank">
+                    <button class="btn btn-success">Buka Youtube Channel</button>
+                </a> --}}
+                <a  href="{{ route('getLoginUrl') }}" class="btn btn-round btn-signin-social"><i class="fa  fa-youtube youtube-color"></i> {{trans('lang.sign_up_youtube')}}</a>
             </div>
         </div>
 
