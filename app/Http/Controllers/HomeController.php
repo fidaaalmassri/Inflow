@@ -147,18 +147,15 @@ public function googleCallback(){
         return $authResponse;
     }
     public  function youtubeCallback (Request $request) {
-        // $code = $request->code ;
-        // $code = $_GET['code'];
-        // $_GET['code']
-        // $client = new \GuzzleHttp\Client(); 
-        // $code = Input::get('code');
+      
         $code = $request->code;
         $authObject  = new AuthenticateService;
+        $authResponse = $authObject->authChannelWithCode($code);
+           return $authResponse  ;
+
         // $authUrl = $authObject->getLoginUrl('java12301230@gmail.com','UCN5-b5_3eCtjkBYqUICFeiw'); 
         //   dd($authUrl);
         // $accessToken = $authObject->getToken($code);
-
-        $authResponse = $authObject->authChannelWithCode($code);
         //   $response = (new \GuzzleHttp\Client)->post('http://127.0.0.1:8000/oauth/token', [
         //     'form_params' => [
         //         'grant_type' => 'authorization_code',
@@ -171,20 +168,10 @@ public function googleCallback(){
         //     ]
         // ]);
  
-            // $authUrl = $authObject->getAuthorizationUrl();
-
-             // If we don't have an authorization code then get one
-            //  return  $authResponse  ;
-            //  exit;
-            // return $response->getBody();
         // session()->put('token', json_decode((string) $response->getBody(), true));
-        dd($authResponse);
-        // dd( $response->getBody());
-
     //  return $code;
-        // return redirect('/home');
-
-        // return redirect('/home');
+ 
+    //  return redirect('/home');
     }
     public function redirectGoogle(Request $request)
     {
