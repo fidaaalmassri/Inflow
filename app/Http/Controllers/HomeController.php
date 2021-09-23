@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Input;
+use Illuminate\Support\Facades\Auth;
+
 use Illuminate\Http\Request;
 use  alchemyguy\YoutubeLaravelApi\AuthenticateService;
 use alchemyguy\YoutubeLaravelApi\ChannelService;
@@ -31,7 +33,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('welcome');
+        return view('layouts.dashboard');
     }
 
     public function cadWithAuth( )
@@ -120,6 +122,9 @@ public function googleCallback(){
         // $identifier = $request->get('state');
 
         //   dd($code);
+        // return view('home');
+        // return redirect(route('profile',['id'=>auth::user()->id]));
+
     }
     public function  fetchingAuthCodeAndIdentifier()
     { 
