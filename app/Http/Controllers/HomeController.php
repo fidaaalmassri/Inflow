@@ -151,7 +151,7 @@ public function googleCallback(){
         $code = $request->code;
         $authObject  = new AuthenticateService;
         $authResponse = $authObject->authChannelWithCode($code);
-           return $authResponse  ;
+       dd($authResponse ) ;
 
         // $authUrl = $authObject->getLoginUrl('java12301230@gmail.com','UCN5-b5_3eCtjkBYqUICFeiw'); 
         //   dd($authUrl);
