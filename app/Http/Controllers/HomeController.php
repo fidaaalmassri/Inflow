@@ -148,10 +148,29 @@ public function googleCallback(){
     }
     public  function youtubeCallback (Request $request) {
       
-        $code = $request->code;
+        // $code = $request->code;
         $authObject  = new AuthenticateService;
-        $authResponse = $authObject->authChannelWithCode($code);
-           return $authResponse  ;
+        // $authResponse = $authObject->authChannelWithCode($code);
+        //    return $authResponse  ;
+        $code = $request->get('code');
+        // $identifier = $request->get('state');
+
+        // // dd($code);
+
+        // if($code != null) {
+            $request->session()->forget('youtube_code');
+            // $_SESSION['youtube_code'] = $code;
+            // session(['youtube_code' => $code]);
+            session(['youtube_code' => $code]);
+                $code = $request->session()->get('youtube_code');
+
+        //     $authObject  = new AuthenticateService;
+            $authResponse = $authObject->authChannelWithCode('4/0AX4XfWgaz73LQAuwOBwosHNPBJJfHf7Kj7Yvtnh3e0SAK9IoDAwVG04Qn8dml_XSWK3hzg');
+
+            // dd($code);
+            dd($authResponse);
+
+        //    return response()->json([ $authResponse ], 200);
 
         // $authUrl = $authObject->getLoginUrl('java12301230@gmail.com','UCN5-b5_3eCtjkBYqUICFeiw'); 
         //   dd($authUrl);
