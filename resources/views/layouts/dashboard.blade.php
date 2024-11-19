@@ -42,6 +42,48 @@ $textdir = 'rtl';
 .user-account .dropdown {
     display: inline-block;
     vertical-align: -9px;}
+    
+    #left-sidebar .navbar-brand .logo {
+    width: 100%;
+    height: 100%;
+    margin-bottom: -95px;
+    margin-top: -88px;
+}
+
+.social .profile-header {
+    box-shadow: inset 0 0 0 2000px rgb(176 106 239 / 77%) !important;
+}
+a {
+    color: #b06aef;
+    
+}
+a:hover {
+    color: #b06aef;
+    
+}
+
+
+.theme-cyan .sidebar-nav .metismenu>li.active>a {
+    color: #b06aef;
+}
+.theme-cyan .sidebar-nav .metismenu>li.active>a i {
+    background: #b06aef;
+
+}
+
+
+  a:hover , a:focus{
+    color:#b06aef 
+    
+}
+.theme-cyan .sidebar-nav .metismenu a:hover,.theme-cyan .sidebar-nav .metismenu a:focus{color:#b06aef}
+
+
+.theme-cyan .sidebar-nav .metismenu a:hover i, .theme-cyan .sidebar-nav .metismenu a:focus i {
+    background: #b06aef;
+}
+
+
 </style>
 </head>
 
