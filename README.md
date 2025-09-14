@@ -32,11 +32,6 @@ Influencers often struggle to keep track of their performance across different n
 
 ---
 
-## 📸 Screenshots
-
-_Add screenshots here once uploaded to the `screenshots` folder._
-
----
 
 ## 📦 Installation
 
